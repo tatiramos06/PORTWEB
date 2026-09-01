@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio Profissional de Tatiana Ramos — Analista de Projetos, Migração de Dados, Automação, Inteligência Artificial e Soluções Digitais." />
+  <meta name="keywords" content="Tatiana Ramos, Analista de Projetos, Automação, Migração de Dados, IA Generativa, Python, FastAPI, APIs, AURA Automation, Soluções Digitais" />
+  <meta name="author" content="Tatiana Ramos" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tatiana Ramos | Projetos, Dados & Automação" />
+  <meta property="og:description" content="Transformo desafios operacionais em soluções digitais. Projetos, Migração de Dados, Automação, Inteligência Artificial e Desenvolvimento de Aplicações." />
+  <meta property="og:url" content="https://tatiramos06.github.io/PORTWEB/" />
+  
+  <title>Tatiana Ramos | Projetos, Dados & Automação</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Embedded Stylesheet (Self-Contained Premium Dark Mode) -->
+  <style>
+    :root {
+      --bg-dark: #050811;
+      --bg-card: rgba(13, 20, 36, 0.72);
+      --bg-card-hover: rgba(20, 32, 56, 0.85);
+      --bg-nav: rgba(5, 8, 17, 0.82);
+      --bg-modal: rgba(10, 15, 28, 0.95);
+      
+      --primary: #3892ff;
+      --primary-glow: rgba(56, 146, 255, 0.35);
+      --electric: #00f0ff;
+      --electric-glow: rgba(0, 240, 255, 0.25);
+      --purple: #8b5cf6;
+      --purple-glow: rgba(139, 92, 246, 0.25);
+      
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --border: rgba(255, 255, 255, 0.08);
+      --border-active: rgba(56, 146, 255, 0.4);
+      --border-electric: rgba(0, 240, 255, 0.4);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.25);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 35px rgba(56, 146, 255, 0.18);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      color-scheme: dark;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      background-image: 
+        radial-gradient(circle at 85% 5%, rgba(56, 146, 255, 0.12), transparent 40%),
+        radial-gradient(circle at 15% 40%, rgba(139, 92, 246, 0.08), transparent 35%),
+        radial-gradient(circle at 75% 75%, rgba(0, 240, 255, 0.06), transparent 38%);
+      background-attachment: fixed;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-dark);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: min(1200px, 90%);
+      margin: 0 auto;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, var(--primary) 50%, var(--electric) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .gradient-purple {
+      background: linear-gradient(135deg, #ffffff 0%, var(--purple) 60%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--primary);
+      margin-bottom: 12px;
+      background: rgba(56, 146, 255, 0.08);
+      border: 1px solid rgba(56, 146, 255, 0.2);
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--electric);
+      box-shadow: 0 0 10px var(--electric);
+    }
+
+    .section-head {
+      margin-bottom: 45px;
+    }
+
+    .section-head.center {
+      text-align: center;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+    }
+
+    .section-head.center p {
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .glass-panel {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .glass-panel:hover {
+      border-color: var(--border-active);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-main);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      background: rgba(56, 146, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #2563eb 100%);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #4f9cfd 0%, #1d4ed8 100%);
+      box-shadow: 0 6px 25px rgba(56, 146, 255, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .btn-electric {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.15) 0%, rgba(56, 146, 255, 0.15) 100%);
+      border: 1px solid var(--border-electric);
+      color: var(--electric);
+      box-shadow: 0 4px 20px var(--electric-glow);
+    }
+
+    .btn-electric:hover {
+      background: linear-gradient(135deg, var(--electric) 0%, var(--primary) 100%);
+      color: #050811;
+      border-color: transparent;
+      box-shadow: 0 6px 30px rgba(0, 240, 255, 0.6);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-sm);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-nav);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .navbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #ffffff;
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #ffffff;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--electric));
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover::after, .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-main);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .hero-section {
+      padding: 80px 0 90px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .aura-hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, rgba(56, 146, 255, 0.1), rgba(139, 92, 246, 0.15));
+      border: 1px solid rgba(56, 146, 255, 0.3);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+    }
+
+    .aura-hero-badge {
+      background: var(--electric);
+      color: #050811;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .aura-hero-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .aura-hero-link {
+      color: var(--electric);
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-profile-card {
+      padding: 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-avatar-wrapper {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 24px;
+    }
+
+    .profile-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ffffff;
+      box-shadow: 0 0 40px var(--primary-glow);
+      border: 3px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .status-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: #091224;
+      border: 1px solid var(--border-electric);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--electric);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.15); }
+      100% { opacity: 0.6; transform: scale(0.95); }
+    }
+
+    .profile-name {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .profile-role {
+      font-size: 0.95rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .tag:hover {
+      border-color: var(--primary);
+      color: #ffffff;
+      background: rgba(56, 146, 255, 0.1);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .process-flow-container {
+      padding: 32px;
+    }
+
+    .process-flow-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      left: 20px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--primary), var(--electric), var(--purple));
+      z-index: 1;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      background: rgba(5, 8, 17, 0.6);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .process-step:hover {
+      transform: translateX(6px);
+      border-color: var(--primary);
+      background: rgba(56, 146, 255, 0.08);
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--primary);
+      box-shadow: 0 0 10px var(--primary-glow);
+      flex-shrink: 0;
+    }
+
+    .process-step:nth-child(2) .step-number { border-color: var(--primary); }
+    .process-step:nth-child(4) .step-number { border-color: var(--electric); color: var(--electric); }
+    .process-step:nth-child(6) .step-number { border-color: var(--purple); color: var(--purple); }
+
+    .step-info h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .step-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .competency-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .competency-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(56, 146, 255, 0.1);
+      border: 1px solid rgba(56, 146, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.4rem;
+      transition: var(--transition);
+    }
+
+    .competency-card:hover .competency-icon {
+      background: var(--primary);
+      color: #050811;
+      box-shadow: 0 0 25px var(--primary-glow);
+      transform: scale(1.05);
+    }
+
+    .competency-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .competency-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .project-filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      color: #ffffff;
+      border-color: var(--primary);
+      background: rgba(56, 146, 255, 0.15);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .project-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+      border-color: rgba(56, 146, 255, 0.4);
+      background: linear-gradient(145deg, rgba(13, 20, 36, 0.85), rgba(20, 32, 56, 0.9));
+      box-shadow: 0 0 40px rgba(56, 146, 255, 0.15);
+    }
+
+    .project-category-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--electric);
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+      line-height: 1.65;
+    }
+
+    .project-tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline-path-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 16px 24px;
+      margin-bottom: 50px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .timeline-path-badge span.accent {
+      color: var(--electric);
+    }
+
+    .timeline-items {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .timeline-item {
+      padding: 30px;
+      border-left: 4px solid var(--primary);
+      position: relative;
+    }
+
+    .timeline-item:hover {
+      border-left-color: var(--electric);
+    }
+
+    .timeline-role {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 18px;
+    }
+
+    .tech-card {
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .tech-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--electric);
+      box-shadow: 0 0 20px var(--electric-glow);
+    }
+
+    .tech-icon {
+      font-size: 2rem;
+    }
+
+    .tech-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .aura-section {
+      padding: 90px 0;
+    }
+
+    .aura-banner {
+      padding: 60px;
+      background: linear-gradient(135deg, rgba(13, 20, 36, 0.95), rgba(30, 48, 88, 0.8));
+      border: 1px solid rgba(56, 146, 255, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aura-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--electric-glow), transparent 70%);
+      pointer-events: none;
+    }
+
+    .aura-banner-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .aura-features-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+
+    .aura-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .aura-feature-item svg {
+      color: var(--electric);
+      flex-shrink: 0;
+    }
+
+    .github-section {
+      text-align: center;
+    }
+
+    .github-box {
+      padding: 60px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      border-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(56, 146, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+
+    .contact-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-link {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-link:hover {
+      color: var(--electric);
+      gap: 10px;
+    }
+
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(5, 8, 17, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-card {
+      max-width: 680px;
+      width: 100%;
+      padding: 40px;
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+
+    @media (max-width: 992px) {
+      .hero-section, .about-grid, .aura-banner-grid, .project-card.featured {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-section {
+        padding-top: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-dark);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-cta {
+        display: none;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .aura-banner {
+        padding: 30px 20px;
+      }
+      .aura-features-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Favicon SVG Data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23050811'/><text x='50' y='68' font-family='sans-serif' font-weight='900' font-size='50' fill='%233892ff' text-anchor='middle'>TR</text></svg>" />
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container navbar">
+      <a href="#" class="brand" aria-label="Ir para o topo">
+        <div class="brand-icon">TR</div>
+        <span>Tatiana <span style="color: var(--primary);">Ramos</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#aura">AURA</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#projetos" class="btn btn-sm btn-primary">Ver Projetos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 01. HERO / APRESENTAÇÃO -->
+    <section class="hero-section container">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Projetos • Dados • Automação
+        </div>
+        
+        <h1>
+          Transformo desafios operacionais em 
+          <span class="gradient-text">soluções digitais.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Projetos, Migração de Dados, Automação, Inteligência Artificial e Desenvolvimento de Aplicações.
+        </p>
+
+        <p class="hero-description">
+          Atuo na interseção entre projetos, dados e tecnologia, criando automações, aplicações, integrações e soluções para transformar processos complexos em fluxos mais eficientes.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">
+            Ver Projetos
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn">
+            LinkedIn
+          </a>
+          <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn">
+            GitHub
+          </a>
+        </div>
+
+        <!-- AURA Hero Highlight -->
+        <div class="aura-hero-highlight">
+          <span class="aura-hero-badge">PROJETO PRINCIPAL</span>
+          <span class="aura-hero-text">AURA Automation</span>
+          <a href="#aura" class="aura-hero-link">
+            Ver detalhes ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Profile Card -->
+      <div class="glass-panel hero-profile-card">
+        <div class="profile-avatar-wrapper">
+          <div class="profile-avatar">TR</div>
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Disponível
+          </div>
+        </div>
+
+        <h2 class="profile-name">Tatiana Ramos</h2>
+        <p class="profile-role">Analista de Projetos | Automação | Migração de Dados</p>
+
+        <div class="profile-tags">
+          <span class="tag">Projetos</span>
+          <span class="tag">Migração de Dados</span>
+          <span class="tag">Automação</span>
+          <span class="tag">IA Generativa</span>
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">APIs & Integrações</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. SOBRE MIM -->
+    <section id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="eyebrow">Sobre Mim</div>
+            <h2 class="gradient-text" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px;">
+              Negócio + Tecnologia + Execução
+            </h2>
+            <p>
+              Minha atuação conecta visão de negócio, gestão de projetos, migração de dados e tecnologia. Meu foco é identificar problemas, estruturar processos e criar soluções que possam ser utilizadas, automatizadas e escaladas.
+            </p>
+            <p>
+              Com atuação colaborativa entre Produto, Desenvolvimento, Implantação e Customer Success, possuo experiência na homologação de aplicações, levantamento de requisitos e condução de projetos com foco em impacto prático.
+            </p>
+          </div>
+
+          <!-- Process Flow Diagram -->
+          <div class="glass-panel process-flow-container">
+            <div class="process-flow-title">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              Metodologia de Atuação
+            </div>
+
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-info">
+                  <h4>DESAFIO</h4>
+                  <p>Entender um problema operacional ou de negócio</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-info">
+                  <h4>PROCESSO</h4>
+                  <p>Mapear o fluxo e identificar oportunidades</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-info">
+                  <h4>DADOS</h4>
+                  <p>Estruturar, tratar e validar informações</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-info">
+                  <h4>AUTOMAÇÃO</h4>
+                  <p>Criar automações e eliminar etapas manuais</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-number">05</div>
+                <div class="step-info">
+                  <h4>SOLUÇÃO</h4>
+                  <p>Desenvolver aplicações, plugins e integrações</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-number">06</div>
+                <div class="step-info">
+                  <h4>RESULTADO</h4>
+                  <p>Entregar uma solução prática e escalável</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. COMPETÊNCIAS -->
+    <section id="competencias">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow">Competências</div>
+          <h2>O Que Eu Entrego</h2>
+          <p>Especialidades fundamentadas em organização de projetos, engenharia de dados e desenvolvimento de automações.</p>
+        </div>
+
+        <div class="competencies-grid">
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">📋</div>
+            <h3>Gestão de Projetos</h3>
+            <p>Acompanhamento de entregas, homologação de sistemas, levantamento de requisitos e alinhamento com stakeholders.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">🗄️</div>
+            <h3>Migração de Dados</h3>
+            <p>Importação de grandes volumes, tratamento de layouts, regras de sanitização e garantia de integridade de dados.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">⚡</div>
+            <h3>Automação</h3>
+            <p>Mapeamento de gargalos e criação de robôs/scripts para substituir tarefas repetitivas por fluxos automáticos.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">🤖</div>
+            <h3>Inteligência Artificial</h3>
+            <p>Aplicação de IA Generativa, engenharia de prompts e automação cognitiva para análise de dados não estruturados.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">🐍</div>
+            <h3>Python</h3>
+            <p>Desenvolvimento de scripts de processamento de dados, rotinas de ETL e conectores customizados.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">🚀</div>
+            <h3>FastAPI</h3>
+            <p>Construção de APIs de alta performance e microsserviços para suportar aplicações de automação.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">🔗</div>
+            <h3>APIs e Integrações</h3>
+            <p>Conexão entre sistemas heterogêneos para permitir tráfego contínuo e sincronização de dados.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">💻</div>
+            <h3>Aplicações Web</h3>
+            <p>Interfaces web focadas na navegação simples para que times operacionais executem processos complexos.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">🧩</div>
+            <h3>Plugins</h3>
+            <p>Criação de extensões e módulos customizados para ampliar os recursos de plataformas existentes.</p>
+          </div>
+
+          <div class="glass-panel competency-card">
+            <div class="competency-icon">📊</div>
+            <h3>Processamento de Dados</h3>
+            <p>Extração, parsing e conversão de arquivos operacionais em formatos estruturados como Excel, PDF e JSON.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. PROJETOS -->
+    <section id="projetos">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow">Portfólio</div>
+          <h2>Projetos & Cases</h2>
+          <p>Soluções reais desenvolvidas para transformar desafios de dados e processos em automações eficientes.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="saas">Automação & SaaS</button>
+          <button class="filter-btn" data-filter="dados">Dados & Processos</button>
+          <button class="filter-btn" data-filter="dev">Desenvolvimento</button>
+          <button class="filter-btn" data-filter="integracao">Integrações</button>
+          <button class="filter-btn" data-filter="ia">IA</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- 01. AURA AUTOMATION (Featured #1) -->
+          <div class="glass-panel project-card featured" data-category="saas">
+            <div>
+              <span class="project-category-badge">Automação & SaaS • Projeto Autoral</span>
+              <h3>AURA Automation</h3>
+              <p>
+                Um ecossistema de automação criado para transformar processos operacionais em soluções digitais escaláveis. Plataforma SaaS com arquitetura modular envolvendo engine de execução, marketplace de automações, conectores, plugins e Inteligência Artificial.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Engine de Automação</span>
+                <span class="tag">IA Generativa</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://aura-automation.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-electric btn-sm">
+                  Conhecer o AURA ➔
+                </a>
+                <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                  GitHub
+                </a>
+                <button class="btn btn-sm open-details-btn" data-project="aura">
+                  Detalhes Técnicos
+                </button>
+              </div>
+            </div>
+
+            <div style="background: rgba(56, 146, 255, 0.05); border: 1px solid rgba(56, 146, 255, 0.2); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+              <div style="font-size: 2.5rem; margin-bottom: 10px;">⚡</div>
+              <h4 style="font-weight: 800; font-size: 1.1rem; color: var(--electric); margin-bottom: 8px;">AURA Platform</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Transformando tarefas repetitivas em produtos digitais de alta capacidade.</p>
+            </div>
+          </div>
+
+          <!-- 02. MIGRAÇÃO DE DADOS -->
+          <div class="glass-panel project-card" data-category="dados">
+            <div>
+              <span class="project-category-badge">Dados e Processos</span>
+              <h3>Migração de Dados</h3>
+              <p>Soluções para importação, transformação, validação e migração de dados entre sistemas de grande porte com garantia de integridade.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tag">ETL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Validação</span>
+                <span class="tag">Tratamento de Dados</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                GitHub ➔
+              </a>
+              <button class="btn btn-sm open-details-btn" data-project="migracao">
+                Ver Case
+              </button>
+            </div>
+          </div>
+
+          <!-- 03. CONVERSORES DE DADOS -->
+          <div class="glass-panel project-card" data-category="saas">
+            <div>
+              <span class="project-category-badge">Automação</span>
+              <h3>Conversores de Dados</h3>
+              <p>Ferramentas para processamento de PDFs, Excel e outros formatos, transformação de layouts e geração de arquivos estruturados.</p>
+
+              <div class="project-tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">PDF Parsing</span>
+                <span class="tag">Excel</span>
+                <span class="tag">JSON/CSV</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                GitHub ➔
+              </a>
+              <button class="btn btn-sm open-details-btn" data-project="conversores">
+                Ver Case
+              </button>
+            </div>
+          </div>
+
+          <!-- 04. APLICAÇÕES E PLUGINS -->
+          <div class="glass-panel project-card" data-category="dev">
+            <div>
+              <span class="project-category-badge">Desenvolvimento</span>
+              <h3>Aplicações e Plugins</h3>
+              <p>Criação de ferramentas e aplicações específicas baseadas em web para resolver problemas e acelerar a rotina operacional.</p>
+
+              <div class="project-tech-stack">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">Web Apps</span>
+                <span class="tag">Plugins</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                GitHub ➔
+              </a>
+              <button class="btn btn-sm open-details-btn" data-project="plugins">
+                Ver Case
+              </button>
+            </div>
+          </div>
+
+          <!-- 05. INTEGRAÇÕES E APIs -->
+          <div class="glass-panel project-card" data-category="integracao">
+            <div>
+              <span class="project-category-badge">Integrações</span>
+              <h3>Integrações e APIs</h3>
+              <p>Soluções para conectar sistemas heterogêneos e automatizar a troca contínua de dados eliminando a digitação manual.</p>
+
+              <div class="project-tech-stack">
+                <span class="tag">FastAPI</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Webhooks</span>
+                <span class="tag">JSON</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                GitHub ➔
+              </a>
+              <button class="btn btn-sm open-details-btn" data-project="integracoes">
+                Ver Case
+              </button>
+            </div>
+          </div>
+
+          <!-- 06. INTELIGÊNCIA ARTIFICIAL -->
+          <div class="glass-panel project-card" data-category="ia">
+            <div>
+              <span class="project-category-badge">IA e Automação</span>
+              <h3>Inteligência Artificial</h3>
+              <p>Experimentação e aplicação prática de IA Generativa, engenharia de prompts e automação cognitiva em processos organizacionais.</p>
+
+              <div class="project-tech-stack">
+                <span class="tag">IA Generativa</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">Automation</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                GitHub ➔
+              </a>
+              <button class="btn btn-sm open-details-btn" data-project="ia">
+                Ver Case
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. EXPERIÊNCIA PROFISSIONAL -->
+    <section id="experiencia">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow">Trajetória</div>
+          <h2>Evolução Profissional</h2>
+          <p>Carreira pautada na transformação de desafios operacionais em automações escaláveis.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-path-badge">
+            GESTÃO / OPERAÇÕES <span class="accent">➔</span> 
+            IMPLANTAÇÃO <span class="accent">➔</span> 
+            PROJETOS <span class="accent">➔</span> 
+            DADOS <span class="accent">➔</span> 
+            AUTOMAÇÃO <span class="accent">➔</span> 
+            SOLUÇÕES DIGITAIS
+          </div>
+
+          <div class="timeline-items">
+            <div class="glass-panel timeline-item">
+              <h3 class="timeline-role">Gestão & Operações</h3>
+              <p class="timeline-desc">
+                Compreensão profunda das rotinas operacionais, gargalos manuais e necessidades reais do negócio. Atuação integrada com Produto, Desenvolvimento, Implantação e Customer Success.
+              </p>
+            </div>
+
+            <div class="glass-panel timeline-item">
+              <h3 class="timeline-role">Implantação & Homologação</h3>
+              <p class="timeline-desc">
+                Condução do levantamento de requisitos, validação de novas aplicações e acompanhamento do ciclo de entrega de softwares junto a clientes e usuários finais.
+              </p>
+            </div>
+
+            <div class="glass-panel timeline-item">
+              <h3 class="timeline-role">Migração de Dados</h3>
+              <p class="timeline-desc">
+                Especialização no tratamento, sanitização, validação e importação de grandes volumes de dados de sistemas legados para novas plataformas.
+              </p>
+            </div>
+
+            <div class="glass-panel timeline-item">
+              <h3 class="timeline-role">Automação & Soluções Digitais</h3>
+              <p class="timeline-desc">
+                Criação de scripts, ferramentas web, plugins modulares, APIs e aplicações completas para automatizar tarefas e conectar sistemas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. TECNOLOGIAS -->
+    <section id="tecnologias">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow">Habilidades</div>
+          <h2>Tecnologias & Ferramentas</h2>
+          <p>Stack utilizada na construção de automações, conectores e aplicações web.</p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🐍</div>
+            <div class="tech-name">Python</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">⚡</div>
+            <div class="tech-name">FastAPI</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🔌</div>
+            <div class="tech-name">APIs</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🟨</div>
+            <div class="tech-name">JavaScript</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🌐</div>
+            <div class="tech-name">HTML5</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🎨</div>
+            <div class="tech-name">CSS3</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🐙</div>
+            <div class="tech-name">GitHub</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🌱</div>
+            <div class="tech-name">Git</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🧠</div>
+            <div class="tech-name">IA Generativa</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🎯</div>
+            <div class="tech-name">Prompt Eng.</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🤖</div>
+            <div class="tech-name">Automação</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🔄</div>
+            <div class="tech-name">Integração</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">📈</div>
+            <div class="tech-name">Excel</div>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-icon">🗄️</div>
+            <div class="tech-name">Dados</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. AURA AUTOMATION (DEDICATED SECTION) -->
+    <section id="aura" class="aura-section">
+      <div class="container">
+        <div class="glass-panel aura-banner">
+          <div class="aura-banner-grid">
+            <div>
+              <div class="eyebrow" style="background: rgba(0, 240, 255, 0.1); border-color: var(--border-electric); color: var(--electric);">
+                Projeto Autoral
+              </div>
+
+              <h2 style="font-size: 2.2rem; font-weight: 800; margin: 12px 0 16px;">
+                Meu projeto autoral: <span class="gradient-text">AURA Automation</span>
+              </h2>
+
+              <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+                O AURA nasceu da visão de transformar automação em uma plataforma de soluções acessíveis, modulares e escaláveis. É um ecossistema construído para transformar processos operacionais em aplicações eficientes.
+              </p>
+
+              <div class="aura-features-list">
+                <div class="aura-feature-item">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Automação de processos
+                </div>
+                <div class="aura-feature-item">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Integração de fluxos
+                </div>
+                <div class="aura-feature-item">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Aplicações Web & Plugins
+                </div>
+                <div class="aura-feature-item">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Engine & APIs Modulares
+                </div>
+                <div class="aura-feature-item">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Marketplace de Automações
+                </div>
+                <div class="aura-feature-item">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Inteligência Artificial Integrada
+                </div>
+              </div>
+
+              <a href="https://aura-automation.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-electric">
+                Conhecer o AURA
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+
+            <div style="text-align: center; border-left: 1px solid var(--border); padding-left: 30px;">
+              <div style="font-size: 3.5rem; margin-bottom: 12px;">🌐</div>
+              <h3 style="font-size: 1.5rem; font-weight: 800; color: #ffffff;">AURA Ecosystem</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">SaaS de Automação & Soluções Digitais</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. GITHUB -->
+    <section id="github" class="github-section">
+      <div class="container">
+        <div class="glass-panel github-box">
+          <div class="eyebrow">Código Aberto & Projetos</div>
+          <h2 style="font-size: 2rem; font-weight: 800; margin: 14px 0;">
+            Explore meus repositórios no GitHub
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 28px;">
+            Explore meus projetos, experimentos, aplicações e soluções em desenvolvimento.
+          </p>
+          <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Acessar GitHub @tatiramos06
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. CONTATO -->
+    <section id="contato">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow">Conexão</div>
+          <h2>Vamos Conversar</h2>
+          <p>Disponível para projetos de automação, migração de dados, desenvolvimento e consultoria em soluções digitais.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="glass-panel contact-card">
+            <div class="contact-icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p>Acompanhe meu perfil profissional e conexões de mercado.</p>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
+              Ver LinkedIn ➔
+            </a>
+          </div>
+
+          <div class="glass-panel contact-card">
+            <div class="contact-icon">🐙</div>
+            <h3>GitHub</h3>
+            <p>Códigos, scripts, ferramentas e repositórios públicos.</p>
+            <a href="https://github.com/tatiramos06" target="_blank" rel="noopener noreferrer" class="contact-link">
+              Ver GitHub ➔
+            </a>
+          </div>
+
+          <div class="glass-panel contact-card">
+            <div class="contact-icon">⚡</div>
+            <h3>AURA Automation</h3>
+            <p>Plataforma autoral de soluções e automações web.</p>
+            <a href="https://aura-automation.onrender.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
+              Abrir AURA ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Tatiana Ramos • Analista de Projetos | Automação | Migração de Dados | IA | Soluções Digitais</p>
+      <p style="margin-top: 6px; font-size: 0.8rem; color: var(--text-dim);">Construído com HTML5, CSS3 Vanilla, JavaScript e GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Modal for Project Details -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-hidden="true">
+    <div class="glass-panel modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Fechar modal">✕</button>
+      
+      <span class="project-category-badge" id="modalCategory">Categoria</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; margin: 8px 0 16px;" id="modalTitle">Título do Projeto</h2>
+      
+      <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 24px;" id="modalDescription">
+        Descrição detalhada...
+      </p>
+
+      <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 12px;">Tecnologias Envolvidas</h4>
+      <div class="project-tech-stack" id="modalTechStack" style="margin-bottom: 28px;">
+        <!-- Stack tags injected dynamically -->
+      </div>
+
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modalActionLink">
+          Abrir Aplicação / Repositório ➔
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu Navigation Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+          menuToggle.setAttribute('aria-expanded', !expanded);
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // 2. Project Filtering Logic
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filterValue === 'all' || category === filterValue) {
+              card.style.display = 'flex';
+              if (card.classList.contains('featured') && filterValue === 'all') {
+                card.style.display = 'grid';
+              }
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 3. Project Detail Modals
+      const modalOverlay = document.getElementById('modalOverlay');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalCategory = document.getElementById('modalCategory');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalTechStack = document.getElementById('modalTechStack');
+      const modalActionLink = document.getElementById('modalActionLink');
+      const modalClose = document.getElementById('modalClose');
+
+      const projectData = {
+        'aura': {
+          title: 'AURA Automation',
+          category: 'Automação e SaaS',
+          description: 'O AURA Automation é um ecossistema autoral criado para transformar processos operacionais em soluções digitais escaláveis. O projeto engloba automação de processos, integração de fluxos de trabalho, aplicações web browser-first, plugins modulares, processamento de dados, engine de execução assíncrona e marketplace de automações com Inteligência Artificial.',
+          techs: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Web Apps', 'IA Generativa', 'Arquitetura Modular'],
+          link: 'https://aura-automation.onrender.com/'
+        },
+        'migracao': {
+          title: 'Migração de Dados',
+          category: 'Dados e Processos',
+          description: 'Conjunto de soluções para importação, transformação, validação e migração de dados entre sistemas. Foco absoluto em garantia de integridade, mapeamento de layouts legados vs novos, regras de sanitização e tratamento de grandes volumes com minimização de riscos operacionais.',
+          techs: ['Python', 'ETL', 'SQL', 'Tratamento de Dados', 'Qualidade de Dados', 'Sanitização'],
+          link: 'https://github.com/tatiramos06'
+        },
+        'conversores': {
+          title: 'Conversores de Dados',
+          category: 'Automação',
+          description: 'Ferramentas especializadas no processamento e estruturação de arquivos em formatos complexos como PDFs operacionais, relatórios em Excel não estruturados e extratos. Converte automaticamente layouts heterogêneos em bases de dados padronizadas prontas para importação.',
+          techs: ['Python', 'Parsing PDF', 'Excel Processing', 'OpenPyXL', 'JSON/CSV Structuring'],
+          link: 'https://github.com/tatiramos06'
+        },
+        'plugins': {
+          title: 'Aplicações e Plugins',
+          category: 'Desenvolvimento',
+          description: 'Desenvolvimento de aplicações web intuitivas e plugins modulares desenhados para resolver gargalos operacionais específicos de negócios. Interface amigável para usuários não técnicos executarem rotinas técnicas complexas.',
+          techs: ['JavaScript', 'HTML/CSS', 'FastAPI', 'Modular Plugins', 'Web Interface'],
+          link: 'https://github.com/tatiramos06'
+        },
+        'integracoes': {
+          title: 'Integrações e APIs',
+          category: 'Integrações',
+          description: 'Soluções de conectividade entre plataformas e sistemas distintos. Criação de endpoints REST, webhooks e rotinas automáticas de sincronização para eliminar a digitação manual de dados entre softwares.',
+          techs: ['FastAPI', 'REST APIs', 'Webhooks', 'HTTP Requests', 'JSON Schema'],
+          link: 'https://github.com/tatiramos06'
+        },
+        'ia': {
+          title: 'Inteligência Artificial',
+          category: 'IA e Automação',
+          description: 'Experimentação e aplicação prática de modelos de IA Generativa e Engenharia de Prompts para automação cognitiva. Aplicação de agentes para extração de insights, classificação de dados não estruturados e suporte à tomada de decisão.',
+          techs: ['GenAI', 'Prompt Engineering', 'LLM Integration', 'Automação Inteligente'],
+          link: 'https://github.com/tatiramos06'
+        }
+      };
+
+      document.querySelectorAll('.open-details-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const projectId = btn.getAttribute('data-project');
+          const data = projectData[projectId];
+
+          if (data && modalOverlay) {
+            modalTitle.textContent = data.title;
+            modalCategory.textContent = data.category;
+            modalDescription.textContent = data.description;
+            modalActionLink.setAttribute('href', data.link);
+
+            modalTechStack.innerHTML = data.techs
+              .map(t => `<span class="tag">${t}</span>`)
+              .join('');
+
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      if (modalClose && modalOverlay) {
+        const closeModal = () => {
+          modalOverlay.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        };
+
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeModal();
+        });
+      }
+
+      // 4. Scroll Reveal Animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.glass-panel, .section-head, .timeline-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
